@@ -1,9 +1,12 @@
 - name: John McFoo
+  email: wireworldmedia+john@gmail.com
   uid:  'null|johnmcfoo'
 - name: Alice Wallace
+  email: wireworldmedia+alice@gmail.com
   uid:  'null|alice'
 - name: Bob Ablleton
+  email: wireworldmedia+bob@gmail.com
   uid:  'null|bob'
 - name: Charlie O'Callaghan
+  email: wireworldmedia+charlie@gmail.com
   uid:  'null|charlie'
-

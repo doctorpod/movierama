@@ -3,6 +3,7 @@ class VotesController < ApplicationController
     authorize! :vote, _movie
 
     _voter.vote(_type)
+    _send_message
     redirect_to root_path, notice: 'Vote cast'
   end
 
@@ -29,5 +30,13 @@ class VotesController < ApplicationController
 
   def _movie
     @_movie ||= Movie[params[:movie_id]]
+  end
+
+  def _send_message
+    case _type
+    when :like then VoteMailer.like_email(current_user, _movie).deliver
+    when :hate then VoteMailer.hate_email(current_user, _movie).deliver
+    else raise
+    end
   end
 end

@@ -52,6 +52,9 @@ gem 'omniauth' # Authentication
 gem 'omniauth-github'
 gem 'cancan'   # Authorisation
 
+# Background mail sending
+gem 'sucker_punch'
+
 
 # Debugger
 gem 'pry'
