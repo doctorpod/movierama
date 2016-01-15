@@ -32,6 +32,12 @@ Check that everything works by seeding the database with a few users and movies:
     $ ./bin/seed
 
 
+#### Environment variables
+
+* GMAIL_USER
+* GMAIL_PASS
+
+
 #### Launching the app
 
 As the application requires HTTPS, you will need a local setup that supports

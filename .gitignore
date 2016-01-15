@@ -17,3 +17,6 @@
 
 # Redis DB dumps
 dump.rdb
+
+# OSX cruft
+.DS_Store

@@ -33,10 +33,6 @@ class VotesController < ApplicationController
   end
 
   def _send_message
-    case _type
-    when :like then VoteMailer.like_email(current_user, _movie).deliver
-    when :hate then VoteMailer.hate_email(current_user, _movie).deliver
-    else raise
-    end
+    VoteMailerJob.new.async.perform(_type, current_user, _movie)
   end
 end
